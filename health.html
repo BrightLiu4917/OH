@@ -843,9 +843,9 @@ html&gt;body{padding:0}&lt;/style&gt;
     #health-commission-dashboard .brand span { display: block; color: var(--muted-foreground); margin-top: 2px; }
     #health-commission-dashboard .nav-label { padding: 0 10px; color: var(--muted-foreground); margin: 9px 0 7px; }
     #health-commission-dashboard .side-nav { display: grid; gap: 4px; }
-    #health-commission-dashboard .side-nav button { border: 0; background: transparent; color: var(--muted-foreground); padding: 10px 11px; border-radius: 6px; display: flex; align-items: center; gap: 9px; text-align: left; cursor: pointer; }
-    #health-commission-dashboard .side-nav button:hover, #health-commission-dashboard .side-nav button.is-active { background: var(--accent); color: var(--foreground); }
-    #health-commission-dashboard .side-nav button.is-active { box-shadow: inset 3px 0 0 var(--role); }
+    #health-commission-dashboard .side-nav button, #health-commission-dashboard .side-nav a { border: 0; background: transparent; color: var(--muted-foreground); padding: 10px 11px; border-radius: 6px; display: flex; align-items: center; gap: 9px; text-align: left; cursor: pointer; }
+    #health-commission-dashboard .side-nav button:hover, #health-commission-dashboard .side-nav button.is-active, #health-commission-dashboard .side-nav a:hover, #health-commission-dashboard .side-nav a.is-active { background: var(--accent); color: var(--foreground); }
+    #health-commission-dashboard .side-nav button.is-active, #health-commission-dashboard .side-nav a.is-active { box-shadow: inset 3px 0 0 var(--role); }
     #health-commission-dashboard .side-nav i { width: 17px; height: 17px; }
     #health-commission-dashboard .side-foot { margin-top: auto; padding: 16px 9px 0; border-top: 1px solid var(--border); color: var(--muted-foreground); }
     #health-commission-dashboard .side-foot strong { display: block; color: var(--foreground); font-weight: 500; margin-top: 5px; }
@@ -855,6 +855,8 @@ html&gt;body{padding:0}&lt;/style&gt;
     #health-commission-dashboard .role-link { padding: 7px 10px; border-radius: 6px; color: var(--muted-foreground); }
     #health-commission-dashboard .role-link:hover, #health-commission-dashboard .role-link.active { background: var(--accent); color: var(--foreground); }
     #health-commission-dashboard .top-actions { display: flex; align-items: center; gap: 12px; }
+    #health-commission-dashboard .screen-entry { display: inline-flex; align-items: center; gap: 6px; min-height: 34px; padding: 0 10px; border: 1px solid var(--border); border-radius: 6px; color: var(--foreground); background: var(--card); }
+    #health-commission-dashboard .screen-entry:hover, #health-commission-dashboard .screen-entry:focus-visible { border-color: var(--role); color: var(--role); outline: none; }
     #health-commission-dashboard .demo-badge { padding: 5px 8px; border-radius: 999px; background: color-mix(in srgb, var(--warn) 13%, var(--background)); color: var(--foreground); }
     #health-commission-dashboard .icon-btn { width: 34px; height: 34px; display: grid; place-items: center; border: 1px solid var(--border); background: var(--card); color: var(--foreground); border-radius: 6px; cursor: pointer; }
     #health-commission-dashboard .content { padding: 22px 26px 30px; }
@@ -949,7 +951,7 @@ html&gt;body{padding:0}&lt;/style&gt;
     &lt;/aside&gt;
 
     &lt;main class=&quot;main&quot;&gt;
-      &lt;header class=&quot;topbar&quot;&gt;&lt;nav class=&quot;role-nav&quot; aria-label=&quot;原型页面&quot;&gt;&lt;a class=&quot;role-link&quot; href=&quot;index.html&quot; target=&quot;_top&quot;&gt;闭环总览&lt;/a&gt;&lt;a class=&quot;role-link active&quot; href=&quot;health.html&quot; target=&quot;_top&quot;&gt;卫健委&lt;/a&gt;&lt;a class=&quot;role-link&quot; href=&quot;hospital-login.html&quot; target=&quot;_top&quot;&gt;医院&lt;/a&gt;&lt;a class=&quot;role-link&quot; href=&quot;enterprise-login.html&quot; target=&quot;_top&quot;&gt;企业&lt;/a&gt;&lt;/nav&gt;&lt;div class=&quot;top-actions&quot;&gt;&lt;span class=&quot;demo-badge&quot;&gt;演示数据&lt;/span&gt;&lt;button class=&quot;icon-btn&quot; type=&quot;button&quot; aria-label=&quot;通知&quot;&gt;&lt;i data-lucide=&quot;bell&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;button class=&quot;icon-btn&quot; type=&quot;button&quot; aria-label=&quot;退出登录&quot; data-logout&gt;&lt;i data-lucide=&quot;log-out&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;&lt;/header&gt;
+      &lt;header class=&quot;topbar&quot;&gt;&lt;nav class=&quot;role-nav&quot; aria-label=&quot;原型页面&quot;&gt;&lt;a class=&quot;role-link&quot; href=&quot;index.html&quot; target=&quot;_top&quot;&gt;闭环总览&lt;/a&gt;&lt;a class=&quot;role-link active&quot; href=&quot;health.html&quot; target=&quot;_top&quot;&gt;卫健委&lt;/a&gt;&lt;a class=&quot;role-link&quot; href=&quot;hospital.html&quot; target=&quot;_top&quot;&gt;医院&lt;/a&gt;&lt;a class=&quot;role-link&quot; href=&quot;enterprise.html&quot; target=&quot;_top&quot;&gt;企业&lt;/a&gt;&lt;/nav&gt;&lt;div class=&quot;top-actions&quot;&gt;&lt;a class=&quot;screen-entry&quot; href=&quot;health-screen.html&quot; target=&quot;_top&quot;&gt;&lt;i data-lucide=&quot;monitor-up&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;监管大屏&lt;/a&gt;&lt;span class=&quot;demo-badge&quot;&gt;演示数据&lt;/span&gt;&lt;button class=&quot;icon-btn&quot; type=&quot;button&quot; aria-label=&quot;通知&quot;&gt;&lt;i data-lucide=&quot;bell&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;button class=&quot;icon-btn&quot; type=&quot;button&quot; aria-label=&quot;退出登录&quot; data-logout&gt;&lt;i data-lucide=&quot;log-out&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;&lt;/header&gt;
 
       &lt;div class=&quot;content&quot;&gt;&lt;div data-view-section=&quot;overview&quot;&gt;
         &lt;div class=&quot;page-head&quot;&gt;&lt;div&gt;&lt;h1&gt;区域职业健康监测&lt;/h1&gt;&lt;p&gt;查看企业检查覆盖、机构质量和风险线索。&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;filters&quot;&gt;&lt;select class=&quot;filter&quot; data-region aria-label=&quot;行政区&quot;&gt;&lt;option value=&quot;all&quot;&gt;全市&lt;/option&gt;&lt;option value=&quot;yanta&quot;&gt;雁塔区&lt;/option&gt;&lt;option value=&quot;gaoxin&quot;&gt;高新区&lt;/option&gt;&lt;/select&gt;&lt;select class=&quot;filter&quot; aria-label=&quot;行业&quot;&gt;&lt;option&gt;全部行业&lt;/option&gt;&lt;option&gt;装备制造&lt;/option&gt;&lt;option&gt;化工&lt;/option&gt;&lt;/select&gt;&lt;div class=&quot;periods&quot; aria-label=&quot;统计周期&quot;&gt;&lt;button class=&quot;is-active&quot; data-period=&quot;month&quot;&gt;本月&lt;/button&gt;&lt;button data-period=&quot;quarter&quot;&gt;本季度&lt;/button&gt;&lt;button data-period=&quot;year&quot;&gt;本年度&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
@@ -971,7 +973,7 @@ html&gt;body{padding:0}&lt;/style&gt;
     (() =&gt; {
       const root = document.getElementById(&#x27;health-commission-dashboard&#x27;);
       const content = root.querySelector(&#x27;.content&#x27;);
-      const navButtons = [...root.querySelectorAll(&#x27;[data-view]&#x27;)];
+      const navButtons = [...root.querySelectorAll(&#x27;button[data-view]&#x27;)];
       const toast = root.querySelector(&#x27;.toast&#x27;);
       const modalBackdrop = root.querySelector(&#x27;[data-modal-backdrop]&#x27;);
       const modalTitle = root.querySelector(&#x27;[data-modal-title]&#x27;);
@@ -1038,13 +1040,13 @@ html&gt;body{padding:0}&lt;/style&gt;
       navButtons.forEach((button) =&gt; button.addEventListener(&#x27;click&#x27;, () =&gt; navigate(button.dataset.view)));
       root.addEventListener(&#x27;input&#x27;, (event) =&gt; { if (!event.target.matches(&#x27;[data-table-search]&#x27;)) return; const term = event.target.value.trim().toLowerCase(); const sectionNode = event.target.closest(&#x27;[data-view-section]&#x27;); sectionNode.querySelectorAll(&#x27;[data-table-body] tr&#x27;).forEach((row) =&gt; { row.hidden = term &amp;&amp; !row.textContent.toLowerCase().includes(term); }); });
       root.addEventListener(&#x27;change&#x27;, (event) =&gt; { if (event.target.matches(&#x27;[data-toast-change]&#x27;)) showToast(event.target.dataset.toastChange); });
-      root.addEventListener(&#x27;click&#x27;, (event) =&gt; { const action = event.target.closest(&#x27;[data-toast]&#x27;); const create = event.target.closest(&#x27;[data-create]&#x27;); const close = event.target.closest(&#x27;[data-modal-close]&#x27;); const logout = event.target.closest(&#x27;[data-logout]&#x27;); if (action) showToast(action.dataset.toast); if (create) openModal(create.dataset.create); if (close) closeModal(); if (logout) parent.postMessage({type:&#x27;prototype-navigate&#x27;,url:&#x27;health-login.html&#x27;}, &#x27;*&#x27;); });
+      root.addEventListener(&#x27;click&#x27;, (event) =&gt; { const action = event.target.closest(&#x27;[data-toast]&#x27;); const create = event.target.closest(&#x27;[data-create]&#x27;); const close = event.target.closest(&#x27;[data-modal-close]&#x27;); const logout = event.target.closest(&#x27;[data-logout]&#x27;); if (action) showToast(action.dataset.toast); if (create) openModal(create.dataset.create); if (close) closeModal(); if (logout) parent.postMessage({type:&#x27;prototype-navigate&#x27;,url:&#x27;login.html&#x27;}, &#x27;*&#x27;); });
       const saveModal = () =&gt; { const required = [...modalForm.querySelectorAll(&#x27;[required]&#x27;)]; if (required.some((field) =&gt; !field.value.trim())) { formError.textContent = &#x27;请填写所有必填项。&#x27;; return; } const values = {}; modalForm.querySelectorAll(&#x27;[name]&#x27;).forEach((field) =&gt; { values[field.name] = field.value.trim(); }); addCreatedRow(values); closeModal(); showToast(&#x27;新增成功，演示数据已写入当前列表&#x27;); };
       modalForm.addEventListener(&#x27;submit&#x27;, (event) =&gt; { event.preventDefault(); saveModal(); });
       modalForm.querySelector(&#x27;button[type=&quot;submit&quot;]&#x27;).addEventListener(&#x27;click&#x27;, (event) =&gt; { event.preventDefault(); saveModal(); });
       window.addEventListener(&#x27;hashchange&#x27;, () =&gt; navigate(location.hash.slice(1), false));
       window.addEventListener(&#x27;message&#x27;, (event) =&gt; { if (event.data?.type === &#x27;prototype-init&#x27;) navigate(event.data.view, false); });
-      navigate(&#x27;overview&#x27;, false);
+      navigate(location.hash.slice(1) || &#x27;overview&#x27;, false);
       parent.postMessage({type:&#x27;prototype-ready&#x27;}, &#x27;*&#x27;);
       if (globalThis.lucide) globalThis.lucide.createIcons({attrs:{width:16,height:16}});
     })();
@@ -1293,6 +1295,5 @@ html&gt;body{padding:0}&lt;/style&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 "></iframe>
-<script>(function(){var frame=document.querySelector('iframe'),view=location.hash.slice(1);function init(){frame.contentWindow.postMessage({type:'prototype-init',view:view},'*')}window.addEventListener('message',function(event){var data=event.data||{};if(data.type==='prototype-ready'){init()}if(data.type==='prototype-route'&&/^[a-z-]+$/.test(data.view)){view=data.view;history.replaceState(null,'','#'+view)}if(data.type==='prototype-navigate'&&/^[a-z0-9-]+\.html(?:#[a-z-]+)?$/.test(data.url)){location.href=data.url}});frame.addEventListener('load',init)})();</script>
 </body>
 </html>
