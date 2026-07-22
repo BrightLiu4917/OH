@@ -5,18 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
-<title>Closed Loop Overview</title>
+<title>Health Login</title>
 <style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:0;background:inherit}iframe{display:block;width:100%;max-width:none;height:100vh;margin:0;border:0}</style>
 </head>
 <body>
-<iframe sandbox="allow-scripts allow-top-navigation-by-user-activation" referrerpolicy="no-referrer" title="Closed Loop Overview" srcdoc="&lt;!doctype html&gt;
+<iframe sandbox="allow-scripts allow-top-navigation-by-user-activation" referrerpolicy="no-referrer" title="Health Login" srcdoc="&lt;!doctype html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;utf-8&quot;&gt;
 &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
 &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
 &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; &#x27;wasm-unsafe-eval&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src &#x27;unsafe-inline&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src &#x27;none&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;&quot;&gt;
-&lt;title&gt;Closed Loop Overview&lt;/title&gt;
+&lt;title&gt;Health Login&lt;/title&gt;
 &lt;style&gt;:root {
   color-scheme: light dark;
   background-color: var(--background) !important;
@@ -813,140 +813,54 @@ svg {
 html&gt;body{padding:0}&lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
-&lt;div id=&quot;closed-loop-overview&quot; class=&quot;loop-page&quot;&gt;
+&lt;div id=&quot;health-login&quot; class=&quot;login-page&quot;&gt;
   &lt;style&gt;
-    #closed-loop-overview {
-      --role: var(--viz-series-1);
-      --role-2: var(--viz-series-2);
-      --role-3: var(--viz-series-3);
-      --role-4: var(--viz-series-4);
-      color: var(--foreground);
-      background: var(--background);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;
-      font-size: var(--font-size-base);
-      min-width: 1120px;
-    }
-    #closed-loop-overview * { box-sizing: border-box; }
-    #closed-loop-overview [data-lucide]:empty::before { content: &quot;•&quot;; font-style: normal; }
-    #closed-loop-overview [data-lucide=&quot;building-2&quot;]:empty::before { content: &quot;企&quot;; }
-    #closed-loop-overview [data-lucide=&quot;hospital&quot;]:empty::before { content: &quot;医&quot;; }
-    #closed-loop-overview [data-lucide=&quot;landmark&quot;]:empty::before { content: &quot;卫&quot;; }
-    #closed-loop-overview [data-lucide=&quot;arrow-right&quot;]:empty::before { content: &quot;→&quot;; }
-    #closed-loop-overview a { color: inherit; text-decoration: none; }
-    #closed-loop-overview button { font: inherit; }
-    #closed-loop-overview .app-header { height: 68px; padding: 0 28px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; gap: 24px; background: var(--card); }
-    #closed-loop-overview .brand { display: flex; align-items: center; gap: 11px; white-space: nowrap; }
-    #closed-loop-overview .brand-mark { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 7px; color: var(--primary-foreground); background: var(--primary); font-weight: 500; }
-    #closed-loop-overview .brand strong { display: block; font-weight: 500; }
-    #closed-loop-overview .brand small { color: var(--muted-foreground); display: block; margin-top: 2px; }
-    #closed-loop-overview .role-nav { display: flex; align-items: center; gap: 4px; }
-    #closed-loop-overview .role-link { padding: 8px 12px; border-radius: 6px; color: var(--muted-foreground); }
-    #closed-loop-overview .role-link:hover, #closed-loop-overview .role-link.active { color: var(--foreground); background: var(--accent); }
-    #closed-loop-overview .demo-label { display: inline-flex; align-items: center; gap: 6px; color: var(--muted-foreground); white-space: nowrap; }
-    #closed-loop-overview .demo-label::before { content: &quot;&quot;; width: 7px; height: 7px; border-radius: 50%; background: var(--role); }
-    #closed-loop-overview .page { padding: 28px 32px 34px; }
-    #closed-loop-overview .page-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 24px; }
-    #closed-loop-overview h1 { margin: 0; font-size: 28px; font-weight: 500; letter-spacing: 0; }
-    #closed-loop-overview h2 { margin: 0; font-size: 16px; font-weight: 500; }
-    #closed-loop-overview p { margin: 0; }
-    #closed-loop-overview .page-head p { color: var(--muted-foreground); margin-top: 6px; }
-    #closed-loop-overview .progress-summary { display: flex; align-items: center; gap: 20px; }
-    #closed-loop-overview .summary-item { padding-left: 15px; border-left: 2px solid var(--border); }
-    #closed-loop-overview .summary-item strong { display: block; font-size: 18px; font-weight: 500; }
-    #closed-loop-overview .summary-item span { color: var(--muted-foreground); }
-    #closed-loop-overview .flow-toolbar { display: flex; gap: 8px; align-items: center; margin-bottom: 18px; }
-    #closed-loop-overview .stage-btn { border: 1px solid var(--border); background: var(--card); color: var(--muted-foreground); padding: 8px 12px; border-radius: 6px; cursor: pointer; }
-    #closed-loop-overview .stage-btn:hover, #closed-loop-overview .stage-btn.is-active { color: var(--primary-foreground); background: var(--primary); border-color: var(--primary); }
-    #closed-loop-overview .flow-board { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--card); }
-    #closed-loop-overview .lane { display: grid; grid-template-columns: 130px 1fr; min-height: 112px; border-bottom: 1px solid var(--border); }
-    #closed-loop-overview .lane:last-child { border-bottom: 0; }
-    #closed-loop-overview .lane-label { padding: 18px; border-right: 1px solid var(--border); display: flex; flex-direction: column; justify-content: center; gap: 6px; }
-    #closed-loop-overview .lane-label i { width: 20px; height: 20px; color: var(--lane-color); }
-    #closed-loop-overview .lane-label strong { font-weight: 500; }
-    #closed-loop-overview .lane-label span { color: var(--muted-foreground); }
-    #closed-loop-overview .lane-track { padding: 16px 20px; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 10px; align-items: center; position: relative; }
-    #closed-loop-overview .lane-track::before { content: &quot;&quot;; position: absolute; left: 34px; right: 34px; top: 50%; height: 1px; background: var(--border); }
-    #closed-loop-overview .flow-node { position: relative; z-index: 1; min-height: 62px; padding: 10px 11px; border-radius: 7px; border: 1px solid var(--border); background: var(--background); color: var(--foreground); text-align: left; cursor: pointer; display: flex; flex-direction: column; justify-content: center; gap: 3px; }
-    #closed-loop-overview .flow-node:hover { border-color: var(--lane-color); }
-    #closed-loop-overview .flow-node.is-active { border-color: var(--lane-color); box-shadow: inset 3px 0 0 var(--lane-color); background: color-mix(in srgb, var(--lane-color) 9%, var(--background)); }
-    #closed-loop-overview .flow-node strong { font-weight: 500; }
-    #closed-loop-overview .flow-node span { color: var(--muted-foreground); font-size: 12px; }
-    #closed-loop-overview .flow-node.blank { visibility: hidden; }
-    #closed-loop-overview .detail-strip { display: grid; grid-template-columns: 1.1fr .9fr 1fr; gap: 0; margin-top: 18px; border: 1px solid var(--border); background: var(--card); }
-    #closed-loop-overview .detail-block { padding: 17px 19px; border-right: 1px solid var(--border); min-width: 0; }
-    #closed-loop-overview .detail-block:last-child { border-right: 0; }
-    #closed-loop-overview .detail-block label { color: var(--muted-foreground); display: block; margin-bottom: 7px; }
-    #closed-loop-overview .detail-block strong { font-weight: 500; }
-    #closed-loop-overview .detail-block p { color: var(--muted-foreground); margin-top: 4px; }
-    #closed-loop-overview .status { display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px; border-radius: 999px; background: color-mix(in srgb, var(--role) 13%, var(--background)); color: var(--foreground); }
-    #closed-loop-overview .status::before { content: &quot;&quot;; width: 6px; height: 6px; border-radius: 50%; background: var(--role); }
-    #closed-loop-overview .handoff { display: flex; align-items: center; gap: 8px; }
-    #closed-loop-overview .handoff i { color: var(--muted-foreground); }
+    #health-login { --role: var(--viz-series-4); color: var(--foreground); background: var(--background); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif; font-size: var(--font-size-base); min-width: 1120px; }
+    #health-login * { box-sizing: border-box; }
+    #health-login [data-lucide]:empty::before { content: &quot;•&quot;; font-style: normal; }
+    #health-login [data-lucide=&quot;landmark&quot;]:empty::before { content: &quot;卫&quot;; }
+    #health-login .shell { min-height: 760px; display: grid; grid-template-columns: minmax(0,1.1fr) minmax(440px,.9fr); }
+    #health-login .context { padding: 48px 56px; background: color-mix(in srgb, var(--role) 9%, var(--background)); border-right: 1px solid var(--border); display: flex; flex-direction: column; }
+    #health-login .brand { display: flex; align-items: center; gap: 11px; }
+    #health-login .brand-mark { width: 38px; height: 38px; border-radius: 7px; background: var(--role); color: var(--background); display: grid; place-items: center; }
+    #health-login .brand strong { display: block; font-weight: 500; }
+    #health-login .brand span { color: var(--muted-foreground); display: block; margin-top: 2px; }
+    #health-login .context-main { margin: auto 0; max-width: 650px; }
+    #health-login h1 { margin: 0; font-size: 32px; font-weight: 500; }
+    #health-login h2 { margin: 0; font-size: 20px; font-weight: 500; }
+    #health-login p { margin: 0; }
+    #health-login .lead { color: var(--muted-foreground); margin-top: 10px; max-width: 560px; }
+    #health-login .flow { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; margin-top: 36px; }
+    #health-login .flow-item { padding-top: 13px; border-top: 2px solid var(--border); }
+    #health-login .flow-item:first-child { border-color: var(--role); }
+    #health-login .flow-item strong { display: block; font-weight: 500; }
+    #health-login .flow-item span { color: var(--muted-foreground); display: block; margin-top: 4px; }
+    #health-login .context-foot { color: var(--muted-foreground); display: flex; gap: 18px; }
+    #health-login .login-area { padding: 46px 66px; display: grid; place-items: center; background: var(--card); }
+    #health-login .login-box { width: min(390px,100%); }
+    #health-login .login-box &gt; p { color: var(--muted-foreground); margin-top: 7px; }
+    #health-login form { margin-top: 27px; }
+    #health-login .field { display: grid; gap: 7px; margin-bottom: 15px; }
+    #health-login .field label { color: var(--muted-foreground); }
+    #health-login .input-wrap { display: flex; align-items: center; gap: 9px; border: 1px solid var(--border); border-radius: 6px; padding: 0 11px; background: var(--background); }
+    #health-login .input-wrap i { color: var(--muted-foreground); width: 17px; }
+    #health-login .input-wrap input { height: 42px; flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: var(--foreground); }
+    #health-login .form-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin: 4px 0 18px; }
+    #health-login .remember { display: flex; gap: 7px; align-items: center; color: var(--muted-foreground); }
+    #health-login .link { border: 0; background: transparent; color: var(--role); cursor: pointer; padding: 0; }
+    #health-login .submit { width: 100%; height: 42px; border: 0; border-radius: 6px; background: var(--primary); color: var(--primary-foreground); font-weight: 500; cursor: pointer; }
+    #health-login .submit[disabled] { opacity: .65; cursor: wait; }
+    #health-login .error { color: var(--destructive); min-height: 22px; margin-top: 9px; }
+    #health-login .entries { display: flex; justify-content: center; gap: 16px; margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--border); color: var(--muted-foreground); }
+    #health-login .entries a { color: var(--muted-foreground); text-decoration: none; }
+    #health-login .entries a:hover { color: var(--foreground); }
   &lt;/style&gt;
-
-  &lt;header class=&quot;app-header&quot;&gt;
-    &lt;div class=&quot;brand&quot;&gt;&lt;div class=&quot;brand-mark&quot;&gt;职&lt;/div&gt;&lt;div&gt;&lt;strong&gt;职业健康监护云平台&lt;/strong&gt;&lt;small&gt;业务闭环设计稿&lt;/small&gt;&lt;/div&gt;&lt;/div&gt;
-    &lt;nav class=&quot;role-nav&quot; aria-label=&quot;原型页面&quot;&gt;
-      &lt;a class=&quot;role-link active&quot; href=&quot;index.html&quot; target=&quot;_top&quot;&gt;闭环总览&lt;/a&gt;
-      &lt;a class=&quot;role-link&quot; href=&quot;health-login.html&quot; target=&quot;_top&quot;&gt;卫健委&lt;/a&gt;
-      &lt;a class=&quot;role-link&quot; href=&quot;hospital-login.html&quot; target=&quot;_top&quot;&gt;医院&lt;/a&gt;
-      &lt;a class=&quot;role-link&quot; href=&quot;enterprise-login.html&quot; target=&quot;_top&quot;&gt;企业&lt;/a&gt;
-    &lt;/nav&gt;
-    &lt;div class=&quot;demo-label&quot;&gt;客户确认稿&lt;/div&gt;
-  &lt;/header&gt;
-
-  &lt;main class=&quot;page&quot;&gt;
-    &lt;div class=&quot;page-head&quot;&gt;
-      &lt;div&gt;&lt;h1&gt;职业健康监护业务闭环&lt;/h1&gt;&lt;p&gt;三端围绕同一份企业台账、体检任务和报告数据协同。&lt;/p&gt;&lt;/div&gt;
-      &lt;div class=&quot;progress-summary&quot;&gt;&lt;div class=&quot;summary-item&quot;&gt;&lt;strong&gt;3 个业务端&lt;/strong&gt;&lt;span&gt;企业、医院、卫健委&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;summary-item&quot;&gt;&lt;strong&gt;7 个关键交接&lt;/strong&gt;&lt;span&gt;从建档到监管反馈&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;flow-toolbar&quot; aria-label=&quot;业务阶段&quot;&gt;
-      &lt;button type=&quot;button&quot; class=&quot;stage-btn is-active&quot; data-stage=&quot;all&quot;&gt;全部流程&lt;/button&gt;
-      &lt;button type=&quot;button&quot; class=&quot;stage-btn&quot; data-stage=&quot;ledger&quot;&gt;建档&lt;/button&gt;
-      &lt;button type=&quot;button&quot; class=&quot;stage-btn&quot; data-stage=&quot;appointment&quot;&gt;预约&lt;/button&gt;
-      &lt;button type=&quot;button&quot; class=&quot;stage-btn&quot; data-stage=&quot;exam&quot;&gt;检查&lt;/button&gt;
-      &lt;button type=&quot;button&quot; class=&quot;stage-btn&quot; data-stage=&quot;report&quot;&gt;报告&lt;/button&gt;
-      &lt;button type=&quot;button&quot; class=&quot;stage-btn&quot; data-stage=&quot;supervision&quot;&gt;监管&lt;/button&gt;
-    &lt;/div&gt;
-
-    &lt;section class=&quot;flow-board&quot; aria-label=&quot;三端业务泳道&quot;&gt;
-      &lt;div class=&quot;lane&quot; style=&quot;--lane-color:var(--role-3)&quot;&gt;&lt;div class=&quot;lane-label&quot;&gt;&lt;i data-lucide=&quot;building-2&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;strong&gt;企业端&lt;/strong&gt;&lt;span&gt;建档与组织体检&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;lane-track&quot;&gt;&lt;button class=&quot;flow-node is-active&quot; data-stage=&quot;ledger&quot; data-owner=&quot;企业端&quot; data-title=&quot;建立职业健康台账&quot; data-output=&quot;企业、岗位、危害因素、接害人员&quot; data-next=&quot;企业端 → 医院端&quot;&gt;&lt;strong&gt;建立台账&lt;/strong&gt;&lt;span&gt;岗位 · 危害 · 人员&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;flow-node&quot; data-stage=&quot;appointment&quot; data-owner=&quot;企业端&quot; data-title=&quot;确认应检人员&quot; data-output=&quot;体检人员清单与检查阶段&quot; data-next=&quot;企业端 → 医院端&quot;&gt;&lt;strong&gt;确认应检&lt;/strong&gt;&lt;span&gt;岗前 · 在岗 · 离岗&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;flow-node&quot; data-stage=&quot;appointment&quot; data-owner=&quot;企业端&quot; data-title=&quot;创建体检预约&quot; data-output=&quot;企业体检批次与预约名单&quot; data-next=&quot;企业端 → 医院端&quot;&gt;&lt;strong&gt;创建预约&lt;/strong&gt;&lt;span&gt;选择医院与日期&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;flow-node blank&quot; aria-hidden=&quot;true&quot;&gt;&lt;/button&gt;&lt;button class=&quot;flow-node blank&quot; aria-hidden=&quot;true&quot;&gt;&lt;/button&gt;&lt;button class=&quot;flow-node&quot; data-stage=&quot;report&quot; data-owner=&quot;企业端&quot; data-title=&quot;接收报告和告知&quot; data-output=&quot;员工报告、告知书、复查要求&quot; data-next=&quot;医院端 → 企业端&quot;&gt;&lt;strong&gt;接收结果&lt;/strong&gt;&lt;span&gt;报告 · 告知 · 复查&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;flow-node&quot; data-stage=&quot;supervision&quot; data-owner=&quot;企业端&quot; data-title=&quot;完成问题整改&quot; data-output=&quot;整改材料与复查结果&quot; data-next=&quot;企业端 → 卫健委&quot;&gt;&lt;strong&gt;整改反馈&lt;/strong&gt;&lt;span&gt;补检与资料完善&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
-      &lt;div class=&quot;lane&quot; style=&quot;--lane-color:var(--role-2)&quot;&gt;&lt;div class=&quot;lane-label&quot;&gt;&lt;i data-lucide=&quot;hospital&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;strong&gt;医院端&lt;/strong&gt;&lt;span&gt;检查与报告签发&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;lane-track&quot;&gt;&lt;button class=&quot;flow-node blank&quot; aria-hidden=&quot;true&quot;&gt;&lt;/button&gt;&lt;button class=&quot;flow-node blank&quot; aria-hidden=&quot;true&quot;&gt;&lt;/button&gt;&lt;button class=&quot;flow-node&quot; data-stage=&quot;appointment&quot; data-owner=&quot;医院端&quot; data-title=&quot;接收企业预约&quot; data-output=&quot;预约批次、名单和检查阶段&quot; data-next=&quot;企业端 → 医院端&quot;&gt;&lt;strong&gt;接收预约&lt;/strong&gt;&lt;span&gt;确认容量和日期&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;flow-node&quot; data-stage=&quot;exam&quot; data-owner=&quot;医院端&quot; data-title=&quot;执行职业健康检查&quot; data-output=&quot;签到、项目进度、检查结果&quot; data-next=&quot;医院内部流转&quot;&gt;&lt;strong&gt;执行检查&lt;/strong&gt;&lt;span&gt;签到 · 导检 · 结果&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;flow-node&quot; data-stage=&quot;report&quot; data-owner=&quot;医院端&quot; data-title=&quot;质控并签发报告&quot; data-output=&quot;个体报告、团检报告和告知书&quot; data-next=&quot;医院端 → 企业端&quot;&gt;&lt;strong&gt;审核签发&lt;/strong&gt;&lt;span&gt;质控 · 复审 · 主检&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;flow-node blank&quot; aria-hidden=&quot;true&quot;&gt;&lt;/button&gt;&lt;button class=&quot;flow-node&quot; data-stage=&quot;supervision&quot; data-owner=&quot;医院端&quot; data-title=&quot;处理质控异常&quot; data-output=&quot;缺项补录、结论修订、告知补发&quot; data-next=&quot;医院端 → 卫健委&quot;&gt;&lt;strong&gt;质控整改&lt;/strong&gt;&lt;span&gt;异常闭环&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
-      &lt;div class=&quot;lane&quot; style=&quot;--lane-color:var(--role-4)&quot;&gt;&lt;div class=&quot;lane-label&quot;&gt;&lt;i data-lucide=&quot;landmark&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;strong&gt;卫健委&lt;/strong&gt;&lt;span&gt;指标与风险监管&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;lane-track&quot;&gt;&lt;button class=&quot;flow-node blank&quot; aria-hidden=&quot;true&quot;&gt;&lt;/button&gt;&lt;button class=&quot;flow-node blank&quot; aria-hidden=&quot;true&quot;&gt;&lt;/button&gt;&lt;button class=&quot;flow-node blank&quot; aria-hidden=&quot;true&quot;&gt;&lt;/button&gt;&lt;button class=&quot;flow-node blank&quot; aria-hidden=&quot;true&quot;&gt;&lt;/button&gt;&lt;button class=&quot;flow-node&quot; data-stage=&quot;supervision&quot; data-owner=&quot;卫健委&quot; data-title=&quot;汇聚监管指标&quot; data-output=&quot;覆盖率、未检人数、机构质量指标&quot; data-next=&quot;平台汇聚 → 卫健委&quot;&gt;&lt;strong&gt;查看指标&lt;/strong&gt;&lt;span&gt;区域 · 行业 · 机构&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;flow-node&quot; data-stage=&quot;supervision&quot; data-owner=&quot;卫健委&quot; data-title=&quot;识别风险线索&quot; data-output=&quot;逾期未检企业、异常机构清单&quot; data-next=&quot;卫健委 → 企业/医院&quot;&gt;&lt;strong&gt;识别风险&lt;/strong&gt;&lt;span&gt;下钻到明细&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;flow-node&quot; data-stage=&quot;supervision&quot; data-owner=&quot;卫健委&quot; data-title=&quot;跟踪整改结果&quot; data-output=&quot;整改进度、复查状态和闭环时间&quot; data-next=&quot;企业/医院 → 卫健委&quot;&gt;&lt;strong&gt;跟踪闭环&lt;/strong&gt;&lt;span&gt;整改 · 复查 · 归档&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
-    &lt;/section&gt;
-
-    &lt;section class=&quot;detail-strip&quot; aria-live=&quot;polite&quot;&gt;
-      &lt;div class=&quot;detail-block&quot;&gt;&lt;label&gt;当前节点&lt;/label&gt;&lt;strong data-detail-title&gt;建立职业健康台账&lt;/strong&gt;&lt;p data-detail-owner&gt;责任端：企业端&lt;/p&gt;&lt;/div&gt;
-      &lt;div class=&quot;detail-block&quot;&gt;&lt;label&gt;形成数据&lt;/label&gt;&lt;strong data-detail-output&gt;企业、岗位、危害因素、接害人员&lt;/strong&gt;&lt;/div&gt;
-      &lt;div class=&quot;detail-block&quot;&gt;&lt;label&gt;数据交接&lt;/label&gt;&lt;div class=&quot;handoff&quot;&gt;&lt;span class=&quot;status&quot; data-detail-next&gt;企业端 → 医院端&lt;/span&gt;&lt;i data-lucide=&quot;arrow-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span&gt;进入下一业务环节&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
-    &lt;/section&gt;
-  &lt;/main&gt;
-
+  &lt;div class=&quot;shell&quot;&gt;
+    &lt;section class=&quot;context&quot;&gt;&lt;div class=&quot;brand&quot;&gt;&lt;div class=&quot;brand-mark&quot;&gt;&lt;i data-lucide=&quot;landmark&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;职业健康监护云平台&lt;/strong&gt;&lt;span&gt;卫健委监管端&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;context-main&quot;&gt;&lt;h1&gt;区域职业健康监管&lt;/h1&gt;&lt;p class=&quot;lead&quot;&gt;汇聚企业台账、体检执行和机构质控数据，识别风险并跟踪整改闭环。&lt;/p&gt;&lt;div class=&quot;flow&quot;&gt;&lt;div class=&quot;flow-item&quot;&gt;&lt;strong&gt;指标监测&lt;/strong&gt;&lt;span&gt;区域、行业、机构&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;flow-item&quot;&gt;&lt;strong&gt;风险识别&lt;/strong&gt;&lt;span&gt;企业与机构异常&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;flow-item&quot;&gt;&lt;strong&gt;整改跟踪&lt;/strong&gt;&lt;span&gt;下发、复核、归档&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;context-foot&quot;&gt;&lt;span&gt;数据分级访问&lt;/span&gt;&lt;span&gt;操作全程审计&lt;/span&gt;&lt;span&gt;演示原型&lt;/span&gt;&lt;/div&gt;&lt;/section&gt;
+    &lt;section class=&quot;login-area&quot;&gt;&lt;div class=&quot;login-box&quot;&gt;&lt;h2&gt;卫健委账号登录&lt;/h2&gt;&lt;p&gt;请输入监管账号和密码。&lt;/p&gt;&lt;form data-login-form&gt;&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;health-account&quot;&gt;账号&lt;/label&gt;&lt;div class=&quot;input-wrap&quot;&gt;&lt;i data-lucide=&quot;user-round&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;input id=&quot;health-account&quot; name=&quot;account&quot; autocomplete=&quot;username&quot; placeholder=&quot;请输入账号&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;health-password&quot;&gt;密码&lt;/label&gt;&lt;div class=&quot;input-wrap&quot;&gt;&lt;i data-lucide=&quot;lock-keyhole&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;input id=&quot;health-password&quot; name=&quot;password&quot; type=&quot;password&quot; autocomplete=&quot;current-password&quot; placeholder=&quot;请输入密码&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;form-row&quot;&gt;&lt;label class=&quot;remember&quot;&gt;&lt;input type=&quot;checkbox&quot; /&gt;记住账号&lt;/label&gt;&lt;button class=&quot;link&quot; type=&quot;button&quot; data-forgot&gt;忘记密码&lt;/button&gt;&lt;/div&gt;&lt;button class=&quot;submit&quot; type=&quot;submit&quot;&gt;登录监管后台&lt;/button&gt;&lt;div class=&quot;error&quot; data-error role=&quot;alert&quot;&gt;&lt;/div&gt;&lt;/form&gt;&lt;div class=&quot;entries&quot;&gt;&lt;a href=&quot;hospital-login.html&quot; target=&quot;_top&quot;&gt;医院端登录&lt;/a&gt;&lt;a href=&quot;enterprise-login.html&quot; target=&quot;_top&quot;&gt;企业端登录&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;
+  &lt;/div&gt;
   &lt;script&gt;
-    (() =&gt; {
-      const root = document.getElementById(&#x27;closed-loop-overview&#x27;);
-      const stageButtons = [...root.querySelectorAll(&#x27;[data-stage].stage-btn&#x27;)];
-      const nodes = [...root.querySelectorAll(&#x27;.flow-node[data-title]&#x27;)];
-      const detailTitle = root.querySelector(&#x27;[data-detail-title]&#x27;);
-      const detailOwner = root.querySelector(&#x27;[data-detail-owner]&#x27;);
-      const detailOutput = root.querySelector(&#x27;[data-detail-output]&#x27;);
-      const detailNext = root.querySelector(&#x27;[data-detail-next]&#x27;);
-      function selectNode(node) {
-        nodes.forEach((item) =&gt; item.classList.toggle(&#x27;is-active&#x27;, item === node));
-        detailTitle.textContent = node.dataset.title;
-        detailOwner.textContent = `责任端：${node.dataset.owner}`;
-        detailOutput.textContent = node.dataset.output;
-        detailNext.textContent = node.dataset.next;
-      }
-      stageButtons.forEach((button) =&gt; button.addEventListener(&#x27;click&#x27;, () =&gt; {
-        stageButtons.forEach((item) =&gt; item.classList.toggle(&#x27;is-active&#x27;, item === button));
-        const matches = button.dataset.stage === &#x27;all&#x27; ? nodes : nodes.filter((node) =&gt; node.dataset.stage === button.dataset.stage);
-        nodes.forEach((node) =&gt; { node.style.opacity = button.dataset.stage === &#x27;all&#x27; || node.dataset.stage === button.dataset.stage ? &#x27;1&#x27; : &#x27;.28&#x27;; });
-        if (matches.length) selectNode(matches[0]);
-      }));
-      nodes.forEach((node) =&gt; node.addEventListener(&#x27;click&#x27;, () =&gt; selectNode(node)));
-    })();
+    (() =&gt; { const root = document.getElementById(&#x27;health-login&#x27;); const form = root.querySelector(&#x27;[data-login-form]&#x27;); const error = root.querySelector(&#x27;[data-error]&#x27;); const submit = form.querySelector(&#x27;.submit&#x27;); const login = () =&gt; { const account = form.querySelector(&#x27;[name=&quot;account&quot;]&#x27;).value.trim(); const password = form.querySelector(&#x27;[name=&quot;password&quot;]&#x27;).value.trim(); if (!account || !password) { error.textContent = &#x27;请输入账号和密码。&#x27;; return; } error.textContent = &#x27;&#x27;; submit.disabled = true; submit.textContent = &#x27;正在登录...&#x27;; parent.postMessage({type:&#x27;prototype-navigate&#x27;,url:&#x27;health.html#overview&#x27;}, &#x27;*&#x27;); }; submit.addEventListener(&#x27;click&#x27;, (event) =&gt; { event.preventDefault(); login(); }); form.addEventListener(&#x27;submit&#x27;, (event) =&gt; { event.preventDefault(); login(); }); root.querySelector(&#x27;[data-forgot]&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; { error.textContent = &#x27;演示原型暂不提供密码找回。&#x27;; }); })();
   &lt;/script&gt;
 &lt;/div&gt;
 
@@ -1192,5 +1106,6 @@ html&gt;body{padding:0}&lt;/style&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 "></iframe>
+<script>window.addEventListener('message',function(event){var data=event.data||{};if(data.type==='prototype-route'&&/^[a-z-]+$/.test(data.view)){history.replaceState(null,'','#'+data.view)}if(data.type==='prototype-ready'){event.source.postMessage({type:'prototype-init',view:location.hash.slice(1)},'*')}if(data.type==='prototype-navigate'&&/^[a-z0-9-]+\.html(?:#[a-z-]+)?$/.test(data.url)){location.href=data.url}});</script>
 </body>
 </html>
